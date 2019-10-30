@@ -13,7 +13,7 @@ public class dogDriver
         System.out.println(dog2.getName() + " weight in kilograms is " + dog2.toKilo());
         System.out.println(dog3.toString());
         System.out.println(dog1.getCount());
-        System.out.println(dog1.compareTo(dog2));
+        System.out.println(dog3.compareTo(dog1));
 
     }//end main
 }//end dogDriver

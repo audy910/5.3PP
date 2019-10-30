@@ -2,7 +2,7 @@ public class dog implements Comparable
 {
     //global variables
     private String name, breed;
-    private int age;
+    private int age, compare;
     private double weight;
     private static int count;
 
@@ -80,20 +80,38 @@ public class dog implements Comparable
     }//end toString()
 
 
-    public int compareTo(dog someDog)
+    public String compareTo(dog someDog)
     {
         if(this.age < someDog.age)
         {
-            return -1;
+            compare = -1;
 
         }else if(this.age == someDog.age)
         {
-            return 0;
+            compare = 0;
         }
         else {
-            return 1;
+            compare = 1;
         }
-    }
+
+        String output= "";
+        if(compare == -1 )
+        {
+            output = someDog.getName() + " is older";
+        }//end if
+        else if (compare == 0)
+        {
+            output = "they are the same age";
+        }//end else if
+        else
+        {
+            output = this.getName() + " is older";
+        }//end else
+        return output;
+    }//end compareTo
+
+
+
 
     @Override
     public int compareTo(Object o) {
